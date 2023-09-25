@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Background changer</title>
+    <link rel="stylesheet" href="js01.css">
+</head>
+
+<body>
+    <!-- HTML run here -->
+
+     <h1>Color Changer</h1>
+      <div class="wrap">
+        <div class="button" id="yellow"></div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="red"></div>
+        <div class="button" id="orange"></div>
+        <div class="button" id="gray"></div>
+        <div class="button" id="green"></div>
+        </div>
+
+     <h2>Try clicking on one of the colors above <div>
+        to change the background color of this page!
+        </h2>  
+
+        <!-- javascript run here -->
+
+<script>
+  const buttons =  document.querySelectorAll('.button');
+  const body = document.querySelector("body");
+
+  buttons.forEach(function(button){
+    console.log(button);
+    button.addEventListener('click', function(e){
+        console.log(e)
+        console.log(e.target)
+        if (e.target.id === 'yellow') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'blue') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'red') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'orange') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'gray') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'green') {
+            body.style.backgroundColor = e.target.id
+        }
+    });
+  });
+
+</script>
+</body>
+</html>
